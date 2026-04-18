@@ -1,0 +1,47 @@
+
+$board-bg: #fafafa;
+$border-color: #333;
+$status-bg: #e0f7fa;
+$text-color: #333;
+$x-color: #e74c3c;
+$o-color: #3498db; 
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $board-bg;
+  font-family: sans-serif;
+
+  .status {
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $text-color;
+    background-color: $status-bg;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; 
+    padding: 10px;
+    background-color: $border-color; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.winner-announcement {
+  background-color: #f1c40f !important; 
+  color: #fff !important;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+  animation: bounce 0.5s infinite alternate;
+}
+
